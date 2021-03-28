@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Boot - Lista kontaktów</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+</head>
+
+<body>
+<h2>Spring Boot - Kontakty</h2>
+<form method="POST">
+    <label for="firstName">Imię:</label>
+    <input type="text" name="firstName"></input><br/>
+    <label for="lastName">Nazwisko:</label>
+    <input type="text" name="lastName"></input><br/>
+    <label for="phoneNumber">Numer telefonu:</label>
+    <input type="text" name="phoneNumber"></input><br/>
+    <label for="emailAddress">E-mail:</label>
+    <input type="text" name="emailAddress"></input><br/>
+    <input type="submit"></input>
+</form>
+
+<ul th:each="contact : ${contacts}">
+    <li>
+        <span th:text="${contact.firstName}">Imię</span>
+        <span th:text="${contact.lastName}">nazwisko</span> :
+        <span th:text="${contact.phoneNumber}">telefon</span>,
+        <span th:text="${contact.emailAddress}">e-mail</span>
+    </li>
+</ul>
+</body>
+</html>
