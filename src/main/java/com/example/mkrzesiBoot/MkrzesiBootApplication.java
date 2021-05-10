@@ -1,13 +1,11 @@
 package com.example.mkrzesiBoot;
 
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.SpringApplication;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@ComponentScan
-@EnableAutoConfiguration
+@SpringBootApplication
 public class MkrzesiBootApplication {
-	public static void main(String[] args) {
-		SpringApplication.run(MkrzesiBootApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(MkrzesiBootApplication.class, args);
+    }
 }
